@@ -1,12 +1,14 @@
 .about {
-    border-radius: 25px;
-    margin: 0 20px 20px 20px;
+   display: flex;
+   width: 95%;
+   margin: 35px;
+   
 }
 
 
 .about .sobre-mi {
-    opacity: 0; /* Inicialmente oculto */
-    animation: fade-in 2s forwards; /* Animación de difuminado */
+    opacity: 0; 
+    animation: fade-in 2s forwards; 
     background-color: rgb(189, 213, 224);
 }
 
@@ -20,7 +22,7 @@
 }
 
 .about.visible {
-    opacity: 1; /* Mostrar cuando la clase 'visible' está presente */
+    opacity: 1; 
 }
 
 .about h1{
@@ -40,15 +42,25 @@
    color: black;
     font-size: 17px;
 }
+ 
 
-.sobre-mi li {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
+.sobre-mi ul li {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: rgb(140, 180, 190);
+    border-radius: 8px;
+    transition: background-color 0.3s ease; 
+    text-align: center; 
+  }
+
+  .sobre-mi ul li:hover {
+    background-color: #e0e0e0; 
+  }
+
 
 
 @media (min-width: 1024px){
+
     .sobre-mi {
         display: flex;
         border-radius: 8px;
@@ -58,4 +70,22 @@
     .sobre-mi h1 {
         font-size: 35px;
     }
+
+    .sobre-mi ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      .sobre-mi ul li {
+        margin: 10px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .sobre-mi ul li:hover {
+        transform: translateY(-5px);
+      }
 }
