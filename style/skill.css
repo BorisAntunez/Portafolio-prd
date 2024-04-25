@@ -1,0 +1,48 @@
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0 15px 0 15px;
+}
+.skills-box {
+    width: 48%; 
+    margin-bottom: 15px;
+    text-align: center;
+    background-color: rgba(18, 41, 54, 0.103);
+}
+
+.skills-box img {
+    max-width: 50%; 
+    height: auto; 
+}
+
+.skills-box:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+.skills h3 {
+    margin: 15px 0;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center ;
+}
+
+.skills-name {
+    font-size: 18px;
+    margin-top: 10px;
+    color: white;
+}
+
+@media (min-width: 1024px) {
+
+    .skills{
+        width: 98%;
+        border-radius: 8px;
+        margin: 0 0 35px 0;
+    }
+}

@@ -1,0 +1,94 @@
+.tittle-education {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.section-education {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+   
+}
+
+.education-box {
+    width: 100%;
+    margin: 25px 0 25px 10px;
+    
+    
+}
+
+.education-img img {
+    width: 65%;
+    height: 5%;
+    margin: 0 10px 0 95px;
+}
+
+#alura {
+    background-color: black;
+    width: 70%;
+    margin: auto;
+}
+
+.education-name{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2 em;
+    margin: 10px 0 10px 0;
+
+}
+
+.education-detalle {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+
+@media (min-width: 1024px){
+
+ .education {
+    background: linear-gradient( #CCCCCC, #666666, #333333,  black);
+    margin: 0;
+    width: 98%;
+    border-radius: 8px;
+ }
+
+ .education h3 {
+    color: black;
+    font-weight: bold;
+    margin: 35px;
+ }
+
+ .section-education {
+    display: flex; 
+    flex-wrap: wrap;  
+    gap: 80px;
+    justify-content: center; 
+    
+}
+
+.education-box {
+    width: 400px;
+    border-radius: 8px;
+    background-color: #666666;
+}
+
+.education-box img{
+    align-items: center;
+    margin: 45px 15px 15px 45px;
+    border-radius: 8px;
+}
+
+.education-name {
+    color: white;
+}
+
+.education-detalle{
+    color: white;
+}
+
+}

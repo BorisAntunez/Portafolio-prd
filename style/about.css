@@ -1,0 +1,61 @@
+.about {
+    border-radius: 25px;
+    margin: 0 20px 20px 20px;
+}
+
+
+.about .sobre-mi {
+    opacity: 0; /* Inicialmente oculto */
+    animation: fade-in 2s forwards; /* Animación de difuminado */
+    background-color: rgb(189, 213, 224);
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about.visible {
+    opacity: 1; /* Mostrar cuando la clase 'visible' está presente */
+}
+
+.about h1{
+    margin: 0 0 15px 0;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+.sobre-mi{
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    text-align: center;
+   color: black;
+    font-size: 17px;
+}
+
+.sobre-mi li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+@media (min-width: 1024px){
+    .sobre-mi {
+        display: flex;
+        border-radius: 8px;
+
+    }
+
+    .sobre-mi h1 {
+        font-size: 35px;
+    }
+}

@@ -1,0 +1,128 @@
+.experience {
+     display: flex;
+    flex-wrap: wrap;
+}
+
+.title-proyectos  {
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+.experience img {
+    height: 78%;
+    width: 100%;
+    margin: 10px 35px 15px 15px;
+}
+
+.experience-info {
+
+display: flex;
+width: 100%;
+flex-direction: row;
+gap: 25px;
+align-items: center;
+justify-content: center;
+
+}
+
+.experience__repo {
+    
+    margin: 10px 25px 10px ;
+    height: 25%;
+    width: 20%;
+    border: 2px solid blue;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgba(0, 0, 255, 0.5);
+    text-align: center;
+    
+}
+
+.experience__demo{
+    margin: 10px 25px 10px ;
+    height: 25%;
+    width: 20%;
+    border: 2px solid blue;
+     border-radius: 8px;
+     padding: 10px;
+     background-color: rgba(0, 0, 255, 0.5);
+     text-align: center;
+    
+}
+
+.experiencia__botao--repo {
+    
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease; 
+}
+
+.experience__botao--demo {
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;  
+}
+
+
+@media (min-width: 1024px) {
+    .experience {
+        display: flex;
+        margin: 55px 0 0 0;
+    }
+
+    .experience h3 {
+        font-size: 35px;
+        position: relative; 
+        margin: 0 0 35px 0;
+    }
+    
+    .experience h3::after {
+        content: ''; 
+        position: absolute;
+        bottom: -3px; 
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #000; 
+        transform: scaleX(0); 
+        transition: transform 0.3s ease; 
+    }
+    
+    .experience h3:hover::after {
+        transform: scaleX(1); 
+    }
+    
+    .experience img{
+        display: block;
+        margin: auto;
+        border-radius: 8px;
+        width: 80%;
+        height: 90%;
+        
+    }
+    
+    .experience-info button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 0 0 45px 0;
+    }
+
+    .experience-info button {
+        font-size: 16px;
+        padding: 10px 20px;
+        text-align: center;
+        display: inline-block;
+        transition: transform 0.3s ease; 
+    }
+    
+    .experience-info button:hover {
+        transform: scale(1.1); 
+    }
+}
+
+  
