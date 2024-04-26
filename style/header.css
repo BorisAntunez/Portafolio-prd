@@ -10,13 +10,14 @@ header{
 
 header h3{
     
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .logo{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 
@@ -33,9 +34,31 @@ header h3{
    color: black;
 }
 
-.menu-list-item-c {
-    font-size: 20px;
+.menu-list-item-c a {
+    text-decoration: none; 
     color: darkblue;
+}
+
+.menu-list-item-c a:hover {
+    text-decoration: underline; 
+}
+
+.menu-list-item-c li {
+    list-style-type: none; 
+    margin-left: 0; 
+}
+
+.menu-list-item-c {
+    display: inline-block; 
+    margin-left: 20px; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #f0f8ff;
+    transition: background-color 0.3s ease;
+}
+
+.menu-list-item-c:hover {
+    background-color: #d3e9ff;
 }
 
 @media (min-width: 1024px){

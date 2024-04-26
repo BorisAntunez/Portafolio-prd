@@ -25,11 +25,8 @@
     margin: 0 10px 0 95px;
 }
 
-#alura {
-    background-color: black;
-    width: 70%;
-    margin: auto;
-}
+
+
 
 .education-name{
     display: flex;
@@ -84,7 +81,9 @@
 }
 
 #alura{
+
     background-color: transparent;
+
 }
 
 .education-name {

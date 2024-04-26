@@ -1,7 +1,24 @@
-footer{
-   text-align: center;
+footer {
+    background-color: #222;
+    color: #fff; 
+    padding: 20px 0; 
+    text-align: center; 
+    border-top: 3px solid #a19f9f; 
+    border-radius: 10px 10px 0 0; 
+}
 
+.footer-box p {
+    margin: 0; 
+    font-size: 16px; 
+}
 
+.footer-box p a {
+    color: #fff; 
+    text-decoration: none; 
+}
+
+.footer-box p a:hover {
+    text-decoration: underline; 
 }
 
 
