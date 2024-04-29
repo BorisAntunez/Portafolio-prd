@@ -1,6 +1,8 @@
 .experience {
      display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 .title-proyectos  {
@@ -11,8 +13,8 @@
 }
 .experience img {
     height: 78%;
-    width: 100%;
-    margin: 10px 35px 15px 15px;
+    width: 97%;
+    margin: 10px 35px 15px 35px;
 }
 
 .experience-info {

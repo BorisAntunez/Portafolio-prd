@@ -1,26 +1,85 @@
-const form = document.querySelector('.formcontato__form');
+document.addEventListener("DOMContentLoaded", function() {
+    var form = document.forms["form"];
+    
+    form.addEventListener("submit", function(event) {
+      var nombreInput = form.elements["nombre"];
+      var nombre = nombreInput.value.trim();
+  
+      
+      if (nombre === "") {
+        alert("El campo Nombre no debe estar vacío.");
+        nombreInput.focus();
+        event.preventDefault(); // Evita que se envíe el formulario
+        return;
+      }
+  
+      // Validar la longitud del campo nombre
+      if (nombre.length > 50) {
+        alert("El campo \"Nombre\" debe contener máximo 50 caracteres.");
+        nombreInput.focus();
+        event.preventDefault(); // Evita que se envíe el formulario
+        return;
+      }
 
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
+      //Aqui parte validacion del campo email
 
-    const formData = new FormData(this); // Obtiene los datos del formulario
+      var emailInput = form.elements["email"];
+      var email = emailInput.value.trim();
 
-    const url = 'https://docs.google.com/forms/d/1YPvx8fZB5RTIy12BYs-wDgHFkJS33xMfE3HYFOU9fPc/prefill';
+      
+      if (email === "") {
+        alert("El campo \"E-mail\" no debe estar vacío.");
+        emailInput.focus();
+        event.preventDefault(); // Evita que se envíe el formulario
+        return;
+      }
 
-    fetch(url, {
-        method: 'POST',
-        body: formData,
-    })
-    .then(response => {
-        if (response.ok) {
-            alert('¡Mensaje enviado con éxito!');
-            // Aquí puedes redirigir al usuario a una página de agradecimiento u otra página
-        } else {
-            alert('Hubo un error al enviar el mensaje. Inténtalo de nuevo más tarde.');
+      // Validar formato de email usando una expresión regular
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert("El formato del correo electrónico no es válido.");
+        emailInput.focus();
+        event.preventDefault(); // Evita que se envíe el formulario
+        return;
+      }
+
+      var asuntoInput = form.elements["asunto"]
+      var asunto = asuntoInput.value.trim();
+
+      if (asunto === "") {
+        alert("El campo \"Asunto\" no debe estar vacío.");
+        asuntoInput.focus();
+        event.preventDefault();
+        return;
+
+      }
+      else if (asunto.length > 50) {
+        alert("El campo \"Asunto\" no debe tener más de 50 caracteres.")
+        asuntoInput.focus();
+        event.preventDefault();
+        return;
+      }
+
+      var mensajeTextarea = form.elements["mensaje"]
+      var mensaje = mensajeTextarea.value.trim();
+
+      if (mensaje === "") {
+        alert ("El campo \"Mensaje\" no debe estar vacío.");
+        mensajeTextarea.focus();
+        event.preventDefault();
+        return;
         }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Hubo un error al enviar el mensaje. Inténtalo de nuevo más tarde.');
+        else if (mensaje.length >300) {
+          alert("El campo \"Mensaje\" no debe tener más de 300 caracteres.")
+          mensajeTextarea.focus();
+          event.addEventListener();
+          return;
+
+        }
+
+
+  
+      
     });
-});
+  });
+  
